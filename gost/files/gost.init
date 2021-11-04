@@ -11,6 +11,7 @@ run_command="$(uci get gost.@gost[0].run_command)"
 start()
 {
 	stop
+
 	if [ "$enable" -eq "1" ]; then
         /usr/bin/gost ${run_command} >/dev/null 2>&1 &
   fi
